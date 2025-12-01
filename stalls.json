@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Spice Garden",
+    "cuisine": "Indian",
+    "sales": 45000,
+    "liveDemo": true,
+    "contests": ["Best Street Food", "Chef's Special"]
+  },
+  {
+    "name": "Sweet Treats",
+    "cuisine": "Desserts",
+    "sales": 38000,
+    "liveDemo": true,
+    "contests": ["Best Dessert", "Chef's Special"]
+  },
+  {
+    "name": "Taco Fiesta",
+    "cuisine": "Mexican",
+    "sales": 52000,
+    "liveDemo": true,
+    "contests": ["Best Street Food", "Best Dessert", "Chef's Special"]
+  },
+  {
+    "name": "Pasta Paradise",
+    "cuisine": "Italian",
+    "sales": 41000,
+    "liveDemo": true,
+    "contests": ["Best Dessert", "Best Street Food", "Chef's Special"]
+  },
+  {
+    "name": "BBQ Nation",
+    "cuisine": "American",
+    "sales": 48000,
+    "liveDemo": true,
+    "contests": ["Best Street Food"]
+  },
+  {
+    "name": "Sushi Corner",
+    "cuisine": "Japanese",
+    "sales": 35000,
+    "liveDemo": false,
+    "contests": []
+  },
+  {
+    "name": "Curry House",
+    "cuisine": "Indian",
+    "sales": 43000,
+    "liveDemo": true,
+    "contests": ["Chef's Special"]
+  },
+  {
+    "name": "Burger Bliss",
+    "cuisine": "American",
+    "sales": 39000,
+    "liveDemo": false,
+    "contests": ["Best Street Food"]
+  }
+]

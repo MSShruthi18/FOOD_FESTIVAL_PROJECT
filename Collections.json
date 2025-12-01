@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Spice Garden",
+    "cuisine": "Indian",
+    "sales": 45000,
+    "liveDemo": true,
+    "contests": ["Best Street Food", "Chef's Special"]
+  },
+  {
+    "name": "Sweet Treats",
+    "cuisine": "Desserts",
+    "sales": 38000,
+    "liveDemo": false,
+    "contests": ["Best Dessert"]
+  },
+  {
+    "name": "Taco Fiesta",
+    "cuisine": "Mexican",
+    "sales": 52000,
+    "liveDemo": true,
+    "contests": ["Best Street Food", "Best Dessert", "Chef's Special"]
+  }
+]

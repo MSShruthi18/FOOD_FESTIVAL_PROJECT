@@ -1,0 +1,166 @@
+[
+  {
+    "name": "Aman Verma",
+    "age": 28,
+    "favoriteCuisine": "Indian",
+    "visitedStalls": ["Spice Garden", "Sweet Treats"],
+    "spent": 1200,
+    "ratings": {
+      "Spice Garden": 9,
+      "Sweet Treats": 8
+    },
+    "stallsVisited": 2,
+    "dishesRated": 5
+  },
+  {
+    "name": "Raj Kumar",
+    "age": 32,
+    "favoriteCuisine": "Mexican",
+    "visitedStalls": ["Spice Garden", "Taco Fiesta", "BBQ Nation", "Pasta Paradise", "Sweet Treats", "Sushi Corner"],
+    "spent": 2500,
+    "ratings": {
+      "Spice Garden": 9,
+      "Taco Fiesta": 10,
+      "BBQ Nation": 8,
+      "Pasta Paradise": 9,
+      "Sweet Treats": 7,
+      "Sushi Corner": 8
+    },
+    "stallsVisited": 6,
+    "dishesRated": 12
+  },
+  {
+    "name": "Priya Singh",
+    "age": 26,
+    "favoriteCuisine": "Italian",
+    "visitedStalls": ["Spice Garden", "Sweet Treats", "Taco Fiesta", "Pasta Paradise", "BBQ Nation", "Sushi Corner", "Curry House"],
+    "spent": 3200,
+    "ratings": {
+      "Spice Garden": 10,
+      "Sweet Treats": 9,
+      "Taco Fiesta": 9,
+      "Pasta Paradise": 10,
+      "BBQ Nation": 8,
+      "Sushi Corner": 9,
+      "Curry House": 10
+    },
+    "stallsVisited": 7,
+    "dishesRated": 15
+  },
+  {
+    "name": "Amit Patel",
+    "age": 35,
+    "favoriteCuisine": "American",
+    "visitedStalls": ["BBQ Nation", "Taco Fiesta", "Pasta Paradise", "Sweet Treats"],
+    "spent": 1800,
+    "ratings": {
+      "BBQ Nation": 10,
+      "Taco Fiesta": 8,
+      "Pasta Paradise": 7,
+      "Sweet Treats": 9
+    },
+    "stallsVisited": 4,
+    "dishesRated": 8
+  },
+  {
+    "name": "Sneha Reddy",
+    "age": 29,
+    "favoriteCuisine": "Desserts",
+    "visitedStalls": ["Sweet Treats", "Spice Garden", "Taco Fiesta", "Pasta Paradise", "BBQ Nation", "Sushi Corner", "Curry House", "Burger Bliss"],
+    "spent": 4500,
+    "ratings": {
+      "Sweet Treats": 10,
+      "Spice Garden": 9,
+      "Taco Fiesta": 10,
+      "Pasta Paradise": 9,
+      "BBQ Nation": 9,
+      "Sushi Corner": 10,
+      "Curry House": 9,
+      "Burger Bliss": 8
+    },
+    "stallsVisited": 8,
+    "dishesRated": 18
+  },
+  {
+    "name": "Vikram Mehta",
+    "age": 31,
+    "favoriteCuisine": "Japanese",
+    "visitedStalls": ["Sushi Corner", "Spice Garden", "Taco Fiesta", "BBQ Nation", "Pasta Paradise"],
+    "spent": 2200,
+    "ratings": {
+      "Sushi Corner": 10,
+      "Spice Garden": 8,
+      "Taco Fiesta": 7,
+      "BBQ Nation": 9,
+      "Pasta Paradise": 8
+    },
+    "stallsVisited": 5,
+    "dishesRated": 9
+  },
+  {
+    "name": "Ananya Sharma",
+    "age": 24,
+    "favoriteCuisine": "Indian",
+    "visitedStalls": ["Spice Garden", "Sweet Treats", "Taco Fiesta"],
+    "spent": 950,
+    "ratings": {
+      "Spice Garden": 9,
+      "Sweet Treats": 8,
+      "Taco Fiesta": 7
+    },
+    "stallsVisited": 3,
+    "dishesRated": 6
+  },
+  {
+    "name": "Karthik Iyer",
+    "age": 27,
+    "favoriteCuisine": "Mexican",
+    "visitedStalls": ["Taco Fiesta", "BBQ Nation", "Pasta Paradise", "Sushi Corner", "Sweet Treats", "Spice Garden"],
+    "spent": 2800,
+    "ratings": {
+      "Taco Fiesta": 10,
+      "BBQ Nation": 9,
+      "Pasta Paradise": 8,
+      "Sushi Corner": 9,
+      "Sweet Treats": 9,
+      "Spice Garden": 10
+    },
+    "stallsVisited": 6,
+    "dishesRated": 14
+  },
+  {
+    "name": "Divya Nair",
+    "age": 30,
+    "favoriteCuisine": "Desserts",
+    "visitedStalls": ["Sweet Treats", "Pasta Paradise", "Taco Fiesta", "Sushi Corner", "BBQ Nation", "Spice Garden", "Curry House"],
+    "spent": 3500,
+    "ratings": {
+      "Sweet Treats": 10,
+      "Pasta Paradise": 9,
+      "Taco Fiesta": 9,
+      "Sushi Corner": 8,
+      "BBQ Nation": 8,
+      "Spice Garden": 9,
+      "Curry House": 10
+    },
+    "stallsVisited": 7,
+    "dishesRated": 16
+  },
+  {
+    "name": "Rohit Deshmukh",
+    "age": 33,
+    "favoriteCuisine": "Italian",
+    "visitedStalls": ["Pasta Paradise", "Spice Garden", "BBQ Nation", "Taco Fiesta", "Sweet Treats", "Curry House"],
+    "spent": 2650,
+    "ratings": {
+      "Pasta Paradise": 10,
+      "Spice Garden": 8,
+      "BBQ Nation": 7,
+      "Taco Fiesta": 8,
+      "Sweet Treats": 9,
+      "Curry House": 9
+    },
+    "stallsVisited": 6,
+    "dishesRated": 11
+  }
+]

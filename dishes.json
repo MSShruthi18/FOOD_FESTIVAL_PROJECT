@@ -1,0 +1,150 @@
+[
+  {
+    "name": "Butter Chicken",
+    "stallId": {"$oid": "692847fe032f60b1c8e77c0f"},
+    "price": 250,
+    "rating": 9.5,
+    "soldBy": [{"$oid": "692847fe032f60b1c8e77c0f"}]
+  },
+  {
+    "name": "Gulab Jamun",
+    "stallId": {"$oid": "692847fe032f60b1c8e77c10"},
+    "price": 80,
+    "rating": 9.8,
+    "soldBy": [
+      {"$oid": "692847fe032f60b1c8e77c10"},
+      {"$oid": "692847fe032f60b1c8e77c11"}
+    ]
+  },
+  {
+    "name": "Tacos Al Pastor",
+    "stallId": {"$oid": "692847fe032f60b1c8e77c11"},
+    "price": 180,
+    "rating": 9.2,
+    "soldBy": [{"$oid": "692847fe032f60b1c8e77c11"}]
+  },
+  {
+    "name": "Tiramisu",
+    "stallId": {"$oid": "692847fe032f60b1c8e77c10"},
+    "price": 200,
+    "rating": 9.6,
+    "soldBy": [
+      {"$oid": "692847fe032f60b1c8e77c10"},
+      {"$oid": "692d5410daf1d46eec2c1795"}
+    ]
+  },
+  {
+    "name": "Margherita Pizza",
+    "stallId": {"$oid": "692d5410daf1d46eec2c1795"},
+    "price": 300,
+    "rating": 8.9,
+    "soldBy": [{"$oid": "692d5410daf1d46eec2c1795"}]
+  },
+  {
+    "name": "BBQ Ribs",
+    "stallId": {"$oid": "692d5410daf1d46eec2c1796"},
+    "price": 450,
+    "rating": 9.4,
+    "soldBy": [{"$oid": "692d5410daf1d46eec2c1796"}]
+  },
+  {
+    "name": "California Roll",
+    "stallId": {"$oid": "692d5410daf1d46eec2c1796"},
+    "price": 280,
+    "rating": 9.1,
+    "soldBy": [{"$oid": "692d5410daf1d46eec2c1796"}]
+  },
+  {
+    "name": "Churros",
+    "stallId": {"$oid": "692d5410daf1d46eec2c1794"},
+    "price": 120,
+    "rating": 9.7,
+    "soldBy": [
+      {"$oid": "692d5410daf1d46eec2c1793"},
+      {"$oid": "692d5410daf1d46eec2c1794"},
+      {"$oid": "692d5410daf1d46eec2c1795"}
+    ]
+  },
+  {
+    "name": "Chicken Biryani",
+    "stallId": {"$oid": "692d5410daf1d46eec2c1792"},
+    "price": 280,
+    "rating": 9.3,
+    "soldBy": [
+      {"$oid": "692d5410daf1d46eec2c1792"},
+      {"$oid": "692d5410daf1d46eec2c1798"}
+    ]
+  },
+  {
+    "name": "Chocolate Lava Cake",
+    "stallId": {"$oid": "692d5410daf1d46eec2c1793"},
+    "price": 150,
+    "rating": 9.4,
+    "soldBy": [{"$oid": "692d5410daf1d46eec2c1793"}]
+  },
+  {
+    "name": "Quesadilla",
+    "stallId": {"$oid": "692847fe032f60b1c8e77c11"},
+    "price": 200,
+    "rating": 9.0,
+    "soldBy": [{"$oid": "692847fe032f60b1c8e77c11"}]
+  },
+  {
+    "name": "Lasagna",
+    "stallId": {"$oid": "692d5410daf1d46eec2c1795"},
+    "price": 350,
+    "rating": 9.2,
+    "soldBy": [{"$oid": "692d5410daf1d46eec2c1795"}]
+  },
+  {
+    "name": "Pulled Pork Sandwich",
+    "stallId": {"$oid": "692d5410daf1d46eec2c1796"},
+    "price": 320,
+    "rating": 9.1,
+    "soldBy": [{"$oid": "692d5410daf1d46eec2c1796"}]
+  },
+  {
+    "name": "Dragon Roll",
+    "stallId": {"$oid": "692d5410daf1d46eec2c1797"},
+    "price": 320,
+    "rating": 9.3,
+    "soldBy": [{"$oid": "692d5410daf1d46eec2c1797"}]
+  },
+  {
+    "name": "Paneer Tikka",
+    "stallId": {"$oid": "692d5410daf1d46eec2c1792"},
+    "price": 220,
+    "rating": 9.1,
+    "soldBy": [
+      {"$oid": "692d5410daf1d46eec2c1792"},
+      {"$oid": "692d5410daf1d46eec2c1798"}
+    ]
+  },
+  {
+    "name": "Samosa",
+    "stallId": {"$oid": "692d5410daf1d46eec2c1798"},
+    "price": 50,
+    "rating": 8.8,
+    "soldBy": [
+      {"$oid": "692d5410daf1d46eec2c1798"},
+      {"$oid": "692847fe032f60b1c8e77c0f"}
+    ]
+  },
+  {
+    "name": "Cheese Burger",
+    "stallId": {"$oid": "66a4f9a0c2c1a0c0a8f8b002"},
+    "price": 180,
+    "rating": 8.7,
+    "soldBy": [{"$oid": "66a4f9a0c2c1a0c0a8f8b002"}]
+  },
+  {
+    "name": "Rasgulla",
+    "stallId": {"$oid": "692d5410daf1d46eec2c1793"},
+    "price": 60,
+    "rating": 9.0,
+    "soldBy": [
+      {"$oid": "692d5410daf1d46eec2c1793"},
+      {"$oid": "692d5410daf1d46eec2c1798"}
+    ]
+  }
+]
