@@ -8,52 +8,32 @@ const FoodFestivalApp = () => {
   const [loading, setLoading] = useState(false);
   const [queryResults, setQueryResults] = useState([]);
   
+  // Retained initial dummy data structure for context and initial stat display
   const [data, setData] = useState({
-    stalls: [
-      { _id: '1', name: "Spice Garden", cuisine: "Indian", sales: 45000, liveDemo: true, contests: ["Best Street Food", "Chef's Special"] },
-      { _id: '2', name: "Sweet Treats", cuisine: "Desserts", sales: 38000, liveDemo: false, contests: ["Best Dessert"] },
-      { _id: '3', name: "Taco Fiesta", cuisine: "Mexican", sales: 52000, liveDemo: true, contests: ["Best Street Food", "Best Dessert", "Chef's Special"] },
-      { _id: '4', name: "Pasta Paradise", cuisine: "Italian", sales: 41000, liveDemo: true, contests: ["Chef's Special"] },
-      { _id: '5', name: "BBQ Nation", cuisine: "American", sales: 48000, liveDemo: true, contests: ["Best Street Food"] },
-      { _id: '6', name: "Sushi Corner", cuisine: "Japanese", sales: 35000, liveDemo: false, contests: [] }
-    ],
-    dishes: [
-      { _id: '1', name: "Butter Chicken", stallId: '1', price: 250, rating: 9.5, soldBy: ['1'] },
-      { _id: '2', name: "Gulab Jamun", stallId: '2', price: 80, rating: 9.8, soldBy: ['2', '3'] },
-      { _id: '3', name: "Tacos Al Pastor", stallId: '3', price: 180, rating: 9.2, soldBy: ['3'] },
-      { _id: '4', name: "Tiramisu", stallId: '2', price: 200, rating: 9.6, soldBy: ['2', '4'] },
-      { _id: '5', name: "Margherita Pizza", stallId: '4', price: 300, rating: 8.9, soldBy: ['4'] },
-      { _id: '6', name: "BBQ Ribs", stallId: '5', price: 450, rating: 9.4, soldBy: ['5'] },
-      { _id: '7', name: "California Roll", stallId: '6', price: 280, rating: 9.1, soldBy: ['6'] },
-      { _id: '8', name: "Churros", stallId: '3', price: 120, rating: 9.7, soldBy: ['2', '3'] }
-    ],
-    visitors: [
-      { _id: '1', name: "Raj Kumar", stallsVisited: 6, dishesRated: 12 },
-      { _id: '2', name: "Priya Singh", stallsVisited: 7, dishesRated: 15 },
-      { _id: '3', name: "Amit Patel", stallsVisited: 4, dishesRated: 8 },
-      { _id: '4', name: "Sneha Reddy", stallsVisited: 8, dishesRated: 18 },
-      { _id: '5', name: "Vikram Mehta", stallsVisited: 5, dishesRated: 9 }
-    ]
+    stalls: [],
+    dishes: [],
+    visitors: []
   });
 
   useEffect(() => {
     fetchData();
   }, []);
 
+  // Function to fetch initial data for dashboard stats (Total Stalls, Total Sales, etc.)
   const fetchData = async () => {
     setLoading(true);
     try {
-      const stallsRes = await fetch(`${API_URL}/stalls`).then(r => r.json());
-      const dishesData = await fetch(`${API_URL}/dishes`).then(r => r.json());
-      const visitorsData = await fetch(`${API_URL}/visitors`).then(r => r.json());
+      const stallsRes = await fetch(`${API_URL}/stalls`).then(r => r.ok ? r.json() : []);
+      const dishesData = await fetch(`${API_URL}/dishes`).then(r => r.ok ? r.json() : []);
+      const visitorsData = await fetch(`${API_URL}/visitors`).then(r => r.ok ? r.json() : []);
       
       setData({
-        stalls: stallsRes || data.stalls,
-        dishes: dishesData || data.dishes,
-        visitors: visitorsData || data.visitors
+        stalls: stallsRes,
+        dishes: dishesData,
+        visitors: visitorsData
       });
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error('Error fetching initial data. Ensure the backend is running and the endpoints are correct.', error);
     }
     setLoading(false);
   };
@@ -63,11 +43,11 @@ const FoodFestivalApp = () => {
     { id: 2, title: "Top Rated Dishes (>9)", icon: Star, color: "linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)" },
     { id: 3, title: "Multi-Stall Visitors (>5)", icon: Users, color: "linear-gradient(135deg, #3b82f6 0%, #6366f1 100%)" },
     { id: 4, title: "Multi-Contest Winners", icon: Award, color: "linear-gradient(135deg, #a855f7 0%, #ec4899 100%)" },
-    { id: 5, title: "Average Price Per Stall", icon: DollarSign, color: "linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%)" },
+    { id: 5, title: "Average Price Per Stall (Mock Data)", icon: DollarSign, color: "linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%)" },
     { id: 6, title: "Multi-Stall Dishes", icon: Utensils, color: "linear-gradient(135deg, #ef4444 0%, #f43f5e 100%)" },
     { id: 7, title: "Most Popular Dish", icon: ChefHat, color: "linear-gradient(135deg, #f97316 0%, #f59e0b 100%)" },
     { id: 8, title: "Super Raters (>10)", icon: BarChart3, color: "linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%)" },
-    { id: 9, title: "Food & Demo Stalls", icon: Music, color: "linear-gradient(135deg, #ec4899 0%, #d946ef 100%)" },
+    { id: 9, title: "Live Demo Stalls", icon: Music, color: "linear-gradient(135deg, #ec4899 0%, #d946ef 100%)" },
     { id: 10, title: "All-Contest Participants", icon: Award, color: "linear-gradient(135deg, #6366f1 0%, #3b82f6 100%)" },
     { id: 11, title: "Most Common Cuisine", icon: Utensils, color: "linear-gradient(135deg, #84cc16 0%, #22c55e 100%)" },
     { id: 12, title: "Top 3 Best-Selling", icon: TrendingUp, color: "linear-gradient(135deg, #10b981 0%, #06b6d4 100%)" }
@@ -76,65 +56,33 @@ const FoodFestivalApp = () => {
   const executeQuery = async (queryId) => {
     setLoading(true);
     setSelectedQuery(queryId);
-    
-    const query = queries.find(q => q.id === queryId);
+    setQueryResults([]); // Clear previous results
     
     try {
       const response = await fetch(`${API_URL}/queries/query${queryId}`);
+      if (!response.ok) {
+        throw new Error(`API call failed with status: ${response.status}`);
+      }
       const results = await response.json();
+      
+      // Ensure results is an array, wrapping single object results (like Q7 or Q11)
       setQueryResults(Array.isArray(results) ? results : [results]);
     } catch (error) {
-      console.error('Error fetching query results:', error);
-      const results = getQueryResultsLocal(queryId);
-      setQueryResults(results);
+      console.error(`Error fetching query ${queryId} results from API:`, error);
+      setQueryResults([{ _id: 'error', name: `API Error: Could not fetch results for Query ${queryId}. Check console for details.`}]);
     }
     
     setLoading(false);
   };
 
-  const getQueryResultsLocal = (queryId) => {
-    switch(queryId) {
-      case 1:
-        return data.stalls.sort((a, b) => b.sales - a.sales);
-      case 2:
-        return data.dishes.filter(d => d.rating > 9);
-      case 3:
-        return data.visitors.filter(v => v.stallsVisited > 5);
-      case 4:
-        return data.stalls.filter(s => s.contests.length > 1);
-      case 5:
-        // FIX: Generating random price between 150 and 650 as requested
-        return data.stalls.map(s => ({
-          ...s,
-          avgPrice: Math.floor(Math.random() * (650 - 150 + 1)) + 150
-        }));
-      case 6:
-        // FIX: Added check for 'd.soldBy' existence
-        return data.dishes.filter(d => d.soldBy && d.soldBy.length > 1);
-      case 7:
-        return [data.dishes.reduce((max, d) => d.rating > max.rating ? d : max, data.dishes[0])];
-      case 8:
-        return data.visitors.filter(v => v.dishesRated > 10);
-      case 9:
-        return data.stalls.filter(s => s.liveDemo);
-      case 10:
-        return data.stalls.filter(s => s.contests.length === 3);
-      case 11:
-        const cuisineCount = data.stalls.reduce((acc, s) => {
-          acc[s.cuisine] = (acc[s.cuisine] || 0) + 1;
-          return acc;
-        }, {});
-        const mostCommon = Object.entries(cuisineCount).sort((a, b) => b[1] - a[1])[0];
-        return [{ _id: mostCommon[0], count: mostCommon[1] }];
-      case 12:
-        return data.stalls.sort((a, b) => b.sales - a.sales).slice(0, 3);
-      default:
-        return [];
-    }
-  };
-
   const renderResults = () => {
-    if (!selectedQuery || queryResults.length === 0) return null;
+    if (!selectedQuery || queryResults.length === 0) {
+        if (loading) return null;
+        if (selectedQuery) {
+            return <div style={{...styles.resultsContainer, textAlign: 'center', padding: '30px', color: '#6b7280'}}>No results found for Query {selectedQuery}.</div>;
+        }
+        return null;
+    }
     
     const query = queries.find(q => q.id === selectedQuery);
 
@@ -152,14 +100,17 @@ const FoodFestivalApp = () => {
         
         <div style={styles.resultsList}>
           {queryResults.map((item, idx) => (
-            <div key={idx} style={styles.resultCard}>
+            <div key={item._id || idx} style={styles.resultCard} className="result-card">
+              {/* Handle API Error message */}
+              {item._id === 'error' && <div style={{color: '#dc2626', fontWeight: 'bold'}}>{item.name}</div>}
+
               {selectedQuery === 1 && (
                 <div style={styles.resultRow}>
                   <div>
                     <span style={styles.stallName}>{item.name}</span>
                     <span style={styles.cuisine}>({item.cuisine})</span>
                   </div>
-                  <span style={styles.sales}>₹{item.sales.toLocaleString()}</span>
+                  <span style={styles.sales}>₹{item.sales?.toLocaleString() || 'N/A'}</span>
                 </div>
               )}
               {selectedQuery === 2 && (
@@ -181,18 +132,19 @@ const FoodFestivalApp = () => {
                 <div>
                   <div style={styles.contestWinner}>{item.name}</div>
                   <div style={styles.contestBadges}>
-                    {item.contests.map((c, i) => (
+                    {item.contests?.map((c, i) => (
                       <span key={i} style={styles.badge}>{c}</span>
-                    ))}
+                    )) || <span style={styles.badge}>No Contests</span>}
                   </div>
                 </div>
               )}
+          
               {selectedQuery === 5 && (
-                <div style={styles.resultRow}>
-                  <span style={styles.stallName}>{item.name}</span>
-                  <span style={styles.avgPrice}>₹{item.avgPrice || 0}</span>
-                </div>
-              )}
+  <div style={styles.resultRow}>
+    <span style={styles.stallName}>{item.stallName || item.name}</span>
+    <span style={styles.avgPrice}>₹{item.averagePrice?.toFixed(2) || item.avgPrice || '0'}</span>
+  </div>
+)}
               {selectedQuery === 6 && (
                 <div style={styles.resultRow}>
                   <span style={styles.dishName}>{item.name}</span>
@@ -226,12 +178,13 @@ const FoodFestivalApp = () => {
               {selectedQuery === 10 && (
                 <div style={styles.resultRow}>
                   <span style={styles.stallName}>{item.name}</span>
-                  <span style={styles.allContests}>All {item.contests.length} contests</span>
+                  <span style={styles.allContests}>All {item.contests?.length || 0} contests</span>
                 </div>
               )}
               {selectedQuery === 11 && (
                 <div style={styles.resultRow}>
-                  <span style={styles.cuisineType}>{item._id || item.cuisine}</span>
+                  {/* Q11 uses $group, so the returned fields are _id and count */}
+                  <span style={styles.cuisineType}>{item._id}</span>
                   <span style={styles.cuisineCount}>{item.count} stalls</span>
                 </div>
               )}
@@ -244,7 +197,7 @@ const FoodFestivalApp = () => {
                       <div style={styles.smallCuisine}>{item.cuisine}</div>
                     </div>
                   </div>
-                  <span style={styles.topSales}>₹{item.sales.toLocaleString()}</span>
+                  <span style={styles.topSales}>₹{item.sales?.toLocaleString() || 'N/A'}</span>
                 </div>
               )}
             </div>
@@ -253,6 +206,7 @@ const FoodFestivalApp = () => {
       </div>
     );
   };
+
   const styles = {
     container: {
       minHeight: '100vh',
@@ -620,7 +574,7 @@ const FoodFestivalApp = () => {
           <div style={{...styles.statCard, borderLeft: '4px solid #10b981'}}>
             <div style={styles.statInfo}>
               <p style={styles.statLabel}>Total Sales</p>
-              <p style={styles.statValue}>₹{data.stalls.reduce((sum, s) => sum + s.sales, 0).toLocaleString()}</p>
+              <p style={styles.statValue}>₹{data.stalls.reduce((sum, s) => sum + (s.sales || 0), 0).toLocaleString()}</p>
             </div>
             <DollarSign style={{width: 40, height: 40, color: '#10b981'}} />
           </div>
